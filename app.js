@@ -10,7 +10,6 @@ app.engine('jade', require('jade').__express);
 app.use(express.favicon(__dirname + '/public/favicon.png'));
 app.use(express.static(__dirname + '/public'));
 
-
 app.get("/", function(req, res){
     res.render("page");
 });
@@ -24,7 +23,6 @@ app.get("/canvasocket", function(req, res){
     res.render("canvasocket");
     console.log("you're on drawing chat");
 });
-
 
 var io = require('socket.io').listen(app.listen(port));
 console.log("Listening on port " + port);
