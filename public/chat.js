@@ -1,8 +1,8 @@
 window.onload = function() {
  
     var messages = [];
-    var domain = 'http://max-learningnodejs.herokuapp.com';
-    var socket = io.connect(domain+'/chat');
+    var domain = window.location.hostname;
+    var socket = io.connect(domain);
     var field = document.getElementById("field");
     var sendButton = document.getElementById("send");
     var content = document.getElementById("content");
@@ -32,6 +32,7 @@ window.onload = function() {
     };
  
 }
+
 $(document).ready(function() {
     $("#field").keyup(function(e) {
         if(e.keyCode == 13) {
