@@ -16,6 +16,8 @@ npm intall socket.io
 node app.js
 ```
 
+Also, don't forget to change your domain name in chat.js and canvasockets.js
+
 
 ##Features
 
