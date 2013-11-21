@@ -17,4 +17,8 @@ node app.js
 ```
 
 
-And enjoy the chat!
+##Features
+
+A chat system with web sockets.
+
+And a drawing system using canvas and web sockets.
