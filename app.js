@@ -7,7 +7,7 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', "jade");
 app.engine('jade', require('jade').__express);
-app.use(express.favicon(__dirname + '/public/favicon.png'));
+app.use(express.favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req, res){
