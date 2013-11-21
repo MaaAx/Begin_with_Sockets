@@ -24,7 +24,7 @@ app.get("/canvasocket", function(req, res){
     console.log("you're on drawing chat");
 });
 
-var io = require('socket.io').listen(app.listen(port));
+var io = require('socket.io').listen(app.listen(process.env.PORT || port));
 console.log("Listening on port " + port);
 
 io.sockets.on('connection', function (socket) {
