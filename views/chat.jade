@@ -7,6 +7,8 @@ html
         script(src='/chat.js')
         script(src='/socket.io/socket.io.js')
     body(style='background: #EEE;')
+      a(href="https://github.com/MaaAx/Begin_with_Sockets")
+        img(style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub")
       .container(style='width: 750px;')
         .page-header
           h1 My chat with NodeJs + Sockets.io
@@ -20,3 +22,9 @@ html
           input.form-control.col-sm-10#field(style='max-width: 600px; margin-right: 10px;')
           button.btn.btn-primary#send(type='button', value='send')
             | Send
+      footer(style='margin-top:50px;')
+        .container
+          .row
+            .col-lg-12
+              p.text-center Designed with all the love in the world by 
+                a(href='maximelamaison.com') Maxime Lamaison.
