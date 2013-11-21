@@ -1,8 +1,7 @@
 window.onload = function() {
  
     var messages = [];
-    var domain = window.location.hostname;
-    var socket = io.connect(domain);
+    var socket = io.connect(window.location.hostname);
     var field = document.getElementById("field");
     var sendButton = document.getElementById("send");
     var content = document.getElementById("content");
