@@ -30,8 +30,8 @@ window.onload = function() {
             socket.emit('send', { message: text, username: name.value });
         }
     };
- 
 }
+
 $(document).ready(function() {
     $("#field").keyup(function(e) {
         if(e.keyCode == 13) {
