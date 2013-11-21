@@ -14,6 +14,16 @@ app.get("/", function(req, res){
     res.render("page");
 });
 
+app.get("/chat", function(req, res){
+    res.render("chat");
+    console.log("you're on talking chat");
+});
+
+app.get("/canvasocket", function(req, res){
+    res.render("canvasocket");
+    console.log("you're on drawing chat");
+});
+
 
 var io = require('socket.io').listen(app.listen(port));
 console.log("Listening on port " + port);
@@ -21,6 +31,13 @@ console.log("Listening on port " + port);
 io.sockets.on('connection', function (socket) {
     socket.emit('message', { message: 'welcome to the chat' });
     socket.on('send', function (data) {
-        io.sockets.emit('message', data);
+       io.sockets.emit('message', data);
+    });
+    socket.on('drawClick', function(data) {
+      socket.broadcast.emit('draw', {
+        x: data.x,
+        y: data.y,
+        type: data.type
+      });
     });
 });
