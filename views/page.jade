@@ -1,0 +1,22 @@
+!!!
+html
+    head
+        title= "Begin with Sockets"
+        link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
+        script(src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript")
+        script(src='/chat.js')
+        script(src='/socket.io/socket.io.js')
+    body(style='background: #EEE;')
+      .container(style='width: 750px;')
+        .page-header
+          h1 My chat with NodeJs + Sockets.io
+        .content(style='height: 300px; border: solid 1px #999; overflow-y: scroll; margin-bottom: 30px;')
+        .controls
+          label Name: 
+          input.form-control#name(style='max-width: 300px;')
+          br
+          label Message: 
+          br
+          input.form-control.col-sm-10#field(style='max-width: 600px; margin-right: 10px;')
+          button.btn.btn-primary#send(type='button', value='send')
+            | Send
