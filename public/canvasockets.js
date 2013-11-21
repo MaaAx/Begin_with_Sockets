@@ -1,5 +1,6 @@
 (function() {
   var DrawApp;
+  var domain = 'http://max-learningnodejs.herokuapp.com';
   DrawApp = {};
 
   DrawApp.init = function() {
@@ -12,7 +13,7 @@
     DrawApp.ctx.strokeStyle = "#ECD018";
     DrawApp.ctx.lineWidth = 5;
     DrawApp.ctx.lineCap = "round";
-    DrawApp.socket = io.connect('http://localhost:4000/canvasocket');
+    DrawApp.socket = io.connect(domain+'/canvasocket');
     DrawApp.socket.on('draw', function(data) {
       return DrawApp.draw(data.x, data.y, data.type);
     });

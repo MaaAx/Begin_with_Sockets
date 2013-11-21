@@ -1,7 +1,8 @@
 window.onload = function() {
  
     var messages = [];
-    var socket = io.connect('http://localhost:4000');
+    var domain = 'http://max-learningnodejs.herokuapp.com';
+    var socket = io.connect(domain+'/chat');
     var field = document.getElementById("field");
     var sendButton = document.getElementById("send");
     var content = document.getElementById("content");
