@@ -10,9 +10,7 @@ Be sure you have NodeJS on your computer, if not go [there](http://nodejs.org/).
 Then go in the directory and run : 
 
 ```
-npm intall express
-npm intall jade
-npm intall socket.io
+npm intall
 node app.js
 ```
 
